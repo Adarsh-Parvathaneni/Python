@@ -1,0 +1,8 @@
+a = (int(input("Enter Marks in Subejct 1"))
+b = (int(input("Enter Marks in Subject 2"))
+c = (int(input("Enter Marks in Subject 3"))
+
+d = float((a+b+c)/3)
+
+print ("The Average Marks is", d)
+  
