@@ -1,0 +1,38 @@
+# implementation of binomial-heap operations  and analyse its time complexity 
+
+import heapq
+
+class BinomialHeap:
+    def __init__(self):
+        self.heap = []
+
+    def insert(self, key):
+        heapq.heappush(self.heap, key)
+
+    def find_min(self):
+        if self.heap:
+            return self.heap[0]
+        return None
+    def extract_min(self):
+        if self.heap:
+            return heapq.heappop(self.heap)
+        return None
+
+    def display(self):
+        print("Heap Elements:", self.heap)
+
+
+bh = BinomialHeap()
+
+values = [20, 5, 15, 22, 9, 13, 27]
+
+for value in values:
+    bh.insert(value)
+
+bh.display()
+
+print("Minimum Element:", bh.find_min())
+
+print("Extracted Minimum:", bh.extract_min())
+
+bh.display()
